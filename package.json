@@ -1,0 +1,23 @@
+{
+  "name": "takeyoshit",
+  "version": "0.0.1",
+  "description": "take yo shit is a helpful, but wise cracking reminder to take care of things",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randomassshit/takeyoshit.git"
+  },
+  "author": "bomb ass bitches",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/randomassshit/takeyoshit/issues"
+  },
+  "homepage": "https://github.com/randomassshit/takeyoshit#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "node-schedule": "^1.2.0"
+  }
+}
