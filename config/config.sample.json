@@ -1,0 +1,7 @@
+{
+  "phone": "1234567890",
+  "email": {
+    "address": "hello@example.com",
+    "password": 123456
+  }
+}

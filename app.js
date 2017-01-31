@@ -1,6 +1,9 @@
 "use strict";
-var express = require('express')
-var app = express()
+var express = require('express');
+var app = express();
+var config = require('./config/config.json');
+
+console.log(config);
 
 app.get('/', function (req, res) {
   res.send('Take yo shit!')
