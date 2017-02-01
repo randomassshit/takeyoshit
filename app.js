@@ -1,27 +1,29 @@
 "use strict";
-var express = require('express');
-var app = express();
-var config = require('./config/config.json');
+const express = require('express');
+const app = express();
+const config = require('./config/config.json');
 
-console.log(config);
 
 app.get('/', function (req, res) {
   res.send('Take yo shit!')
 })
 
-// var j = schedule.scheduleJob('*/0.5 * * *', function(){
-//   console.log('The answer to life, the universe, and everything!');
-// });
+
+var email = require("mailer");
+
 var cron = require('node-schedule');
 var rule = new cron.RecurrenceRule();
-rule.hour = 19;
-rule.minute = 2;
-/*cron.scheduleJob('/2 * * * * *', function(){
-    console.log('Hello');
-});*/
+rule.hour = 23;
+rule.minute = 00;
+
 cron.scheduleJob(rule, function(){
-  console.log("EXECUTE ME")
+  console.log("EXECUTE")
   console.log(Date.now());
+  email.send(config,
+    function(err, result){
+      if(err){ console.log(err); }
+  });
+
 })
 
 app.listen(3000, function () {

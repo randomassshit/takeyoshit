@@ -1,7 +1,14 @@
 {
-  "phone": "1234567890",
   "email": {
-    "address": "hello@example.com",
-    "password": 123456
+    "service": "gmail",
+    "address": "test@gmail.com",
+    "password": "123456"
+  },
+  "mailoptions": {
+    "from": "Fred Foo 👻 <foo@sample.com>", 
+    "to": "test@gmail.com", 
+    "subject": "Hello ✔", 
+    "text": "Hello world ?", 
+    "html": "<b>Hello world ?</b>"
   }
 }
